@@ -14,7 +14,7 @@ require('mason-lspconfig').setup({
     ensure_installed = { 'tsserver', 'jdtls', 'gopls', 'lua_ls' },
     handlers = {
         lsp_zero.default_setup,
-        ['jdtls'] = function ()
+        ['jdtls'] = function()
         end
     }
 })
@@ -38,12 +38,22 @@ cmp.setup({
     formatting = cmp_format,
 })
 
+local function ts_on_attach()
+    vim.keymap.set("n", "<leader>oi", function()
+        vim.lsp.buf.execute_command({
+            command = "_typescript.organizeImports",
+            arguments = { vim.api.nvim_buf_get_name(0) },
+        })
+    end)
+end
+
 require("lspconfig").tsserver.setup {
     settings = {
         implicitProjectConfiguration = {
             checkJs = true
         },
-    }
+    },
+    on_attach = ts_on_attach
 }
 
 require('lspconfig').lua_ls.setup({
