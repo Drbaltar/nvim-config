@@ -1,4 +1,4 @@
-vim.cmd[[colorscheme tokyonight-night]]
+vim.cmd [[colorscheme tokyonight-night]]
 
 vim.opt.termguicolors = true
 vim.opt.nu = true
