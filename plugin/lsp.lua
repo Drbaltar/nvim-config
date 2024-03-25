@@ -54,13 +54,13 @@ require('lspconfig').lua_ls.setup({
     }
 })
 
-require("lspconfig").jdtls.setup {
-    cmd = {
-        'jdtls',
-        "--jvm-arg=" .. string.format("-javaagent:%s", vim.fn.expand "$MASON/share/jdtls/lombok.jar"),
-    }
-}
-
+-- require("lspconfig").jdtls.setup {
+--     cmd = {
+--         'jdtls',
+--         "--jvm-arg=" .. string.format("-javaagent:%s", vim.fn.expand "$MASON/share/jdtls/lombok.jar"),
+--     }
+-- }
+--
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', '<leader>]d', vim.diagnostic.goto_next)
