@@ -7,16 +7,10 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move current line up" })
 
 vim.keymap.set("x", "<leader>p", "\"_dP", { desc = "Paste text without replacing buffer" })
 
-vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
-vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
-vim.keymap.set("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
-vim.keymap.set("n", "<leader>xq", function() require("trouble").toggle("quickfix") end)
-vim.keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
-vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
-vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "[R]efactor: Re[N]ame" })
 
-vim.keymap.set("n", "<leader>b", ':cclose<CR>')
-vim.keymap.set("t", "<Esc>", '<C-\\><C-n>')
+vim.keymap.set("n", "<leader>b", ':cclose<CR>', { desc = "Close quickfix window" })
+vim.keymap.set("t", "<Esc>", '<C-\\><C-n>', { desc = "Shorcut to exit terminal mode" })
 
 -- Opens small terminal at the bottom and focuses
 vim.keymap.set("n", "<leader>obt", '<C-w>s<C-w><C-w>:term<CR>10<C-w>_i', { desc = "[O]pen [B]ottom [T]erminal" })

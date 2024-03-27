@@ -1,6 +1,3 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
@@ -17,10 +14,9 @@ return require('packer').startup(function(use)
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         requires = {
-            --- Uncomment the two plugins below if you want to manage the language servers from neovim
+            -- Manage the language servers from neovim
             { 'williamboman/mason.nvim' },
             { 'williamboman/mason-lspconfig.nvim' },
-
             -- LSP Support
             { 'neovim/nvim-lspconfig' },
             -- Autocompletion
@@ -40,6 +36,7 @@ return require('packer').startup(function(use)
             "nvim-treesitter/nvim-treesitter",
             'nvim-neotest/neotest-jest',
             "rcasia/neotest-java",
+            "nvim-neotest/neotest-go",
             "nvim-neotest/nvim-nio",
         },
         config = function()
@@ -55,7 +52,10 @@ return require('packer').startup(function(use)
                     }),
                     require("neotest-java")({
                         ignore_wrapper = false,
-                    })
+                    }),
+                    require("neotest-go")({
+                        recursive_run = true
+                    }),
                 }
             })
         end

@@ -1,14 +1,13 @@
 local jdtls = require('jdtls')
 
-
 local function on_attach()
-    vim.keymap.set("n", "<leader>oi", jdtls.organize_imports)
-    vim.keymap.set("n", "<leader>rv", jdtls.extract_variable)
-    vim.keymap.set("n", "<leader>ra", jdtls.extract_variable_all)
-    vim.keymap.set("n", "<leader>rc", jdtls.extract_constant)
-    vim.keymap.set("x", "<leader>rm", jdtls.extract_method)
+    vim.keymap.set("n", "<leader>oi", jdtls.organize_imports, { desc = "[O]rganize [I]mports" })
+    vim.keymap.set("n", "<leader>rv", jdtls.extract_variable, { desc = "[R]efactor: Extract [V]ariable" })
+    vim.keymap.set("n", "<leader>ra", jdtls.extract_variable_all,
+        { desc = "[R]efactor: Extract Variable and Replace [All]" })
+    vim.keymap.set("n", "<leader>rc", jdtls.extract_constant, { desc = "[R]efactor: Extract [C]onstant" })
+    vim.keymap.set("x", "<leader>rm", jdtls.extract_method, { desc = "[R]efactor: Extract [M]ethod" })
 end
-
 
 local config = {
     cmd = {
