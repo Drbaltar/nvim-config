@@ -47,6 +47,8 @@ local function ts_on_attach()
     end)
 end
 
+require("neodev").setup()
+
 require("lspconfig").tsserver.setup {
     settings = {
         implicitProjectConfiguration = {
@@ -61,6 +63,9 @@ require('lspconfig').lua_ls.setup({
         Lua = {
             diagnostics = {
                 globals = { 'vim' }
+            },
+            completion = {
+                callSnippet = "Replace"
             }
         }
     }
