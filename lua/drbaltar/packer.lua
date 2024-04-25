@@ -103,6 +103,8 @@ return require('packer').startup(function(use)
         }
     }
     use 'rcarriga/nvim-notify'
-    use 'mfussenegger/nvim-jdtls'
+    use { 'mfussenegger/nvim-jdtls', requires = { 'mfussenegger/nvim-dap' } }
     use 'folke/neodev.nvim'
+    use 'windwp/nvim-ts-autotag'
+    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }
 end)

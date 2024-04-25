@@ -183,6 +183,16 @@ _G.packer_plugins = {
     path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/nvim-comment",
     url = "https://github.com/terrortylor/nvim-comment"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    url = "https://github.com/rcarriga/nvim-dap-ui"
+  },
   ["nvim-jdtls"] = {
     loaded = true,
     path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
@@ -213,6 +223,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -297,14 +312,14 @@ if not vim.g.packer_custom_loader_enabled then
   vim.g.packer_custom_loader_enabled = true
 end
 
--- Config for: neotest
-time([[Config for neotest]], true)
-try_loadstring("\27LJ\2\n%\0\1\3\0\3\0\0046\1\0\0009\1\1\0019\1\2\1D\1\1\0\vgetcwd\afn\bvimÉ\2\1\0\b\0\15\1\0316\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\r\0004\3\4\0006\4\0\0'\6\3\0B\4\2\0025\6\4\0005\a\5\0=\a\6\0063\a\a\0=\a\b\6B\4\2\2>\4\1\0036\4\0\0'\6\t\0B\4\2\0025\6\n\0B\4\2\2>\4\2\0036\4\0\0'\6\v\0B\4\2\0025\6\f\0B\4\2\0?\4\0\0=\3\14\2B\0\2\1K\0\1\0\radapters\1\0\0\1\0\1\18recursive_run\2\15neotest-go\1\0\1\19ignore_wrapper\1\17neotest-java\bcwd\0\benv\1\0\1\aCI\2\1\0\2\19jestConfigFile\26custom.jest.config.ts\16jestCommand\20bun run test --\17neotest-jest\nsetup\fneotest\frequire\a€€À™\4\0", "config", "neotest")
-time([[Config for neotest]], false)
 -- Config for: nvim-surround
 time([[Config for nvim-surround]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
 time([[Config for nvim-surround]], false)
+-- Config for: neotest
+time([[Config for neotest]], true)
+try_loadstring("\27LJ\2\n%\0\1\3\0\3\0\0046\1\0\0009\1\1\0019\1\2\1D\1\1\0\vgetcwd\afn\bvimÉ\2\1\0\b\0\15\1\0316\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\r\0004\3\4\0006\4\0\0'\6\3\0B\4\2\0025\6\4\0005\a\5\0=\a\6\0063\a\a\0=\a\b\6B\4\2\2>\4\1\0036\4\0\0'\6\t\0B\4\2\0025\6\n\0B\4\2\2>\4\2\0036\4\0\0'\6\v\0B\4\2\0025\6\f\0B\4\2\0?\4\0\0=\3\14\2B\0\2\1K\0\1\0\radapters\1\0\0\1\0\1\18recursive_run\2\15neotest-go\1\0\1\19ignore_wrapper\1\17neotest-java\bcwd\0\benv\1\0\1\aCI\2\1\0\2\19jestConfigFile\26custom.jest.config.ts\16jestCommand\20bun run test --\17neotest-jest\nsetup\fneotest\frequire\a€€À™\4\0", "config", "neotest")
+time([[Config for neotest]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
