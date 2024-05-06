@@ -107,4 +107,5 @@ return require('packer').startup(function(use)
     use 'folke/neodev.nvim'
     use 'windwp/nvim-ts-autotag'
     use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }
+    use 'tpope/vim-fugitive'
 end)

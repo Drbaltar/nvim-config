@@ -11,13 +11,15 @@ local function on_attach()
     vim.keymap.set("n", "<leader>tj", jdtls.test_class, { desc = "[T]est [J]ava Class" })
     vim.keymap.set("n", "<leader>tm", jdtls.test_nearest_method, { desc = "[T]est [M]ethod in Test Class" })
     vim.keymap.set("n", "<leader>gt", jdtlsTests.goto_subjects, { desc = "[G]o to [T]est/Subject" })
+    vim.keymap.set("n", "<leader>tg", jdtlsTests.generate, { desc = "[T]est [G]eneration" })
 end
 
 local bundles = {
-    vim.fn.glob("~/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-0.52.0.jar", 1),
+    vim.fn.glob("~/.local/share/nvim/mason/packages/java-debug-adapter/extension/server/*.jar", 1)
 };
 
-vim.list_extend(bundles, vim.split(vim.fn.glob("~/vscode-java-test/server/*.jar", 1), "\n"))
+vim.list_extend(bundles,
+    vim.split(vim.fn.glob("~/.local/share/nvim/mason/packages/java-test/extension/server/*.jar", 1), "\n"))
 
 local config = {
     cmd = {
@@ -32,4 +34,3 @@ local config = {
 }
 
 require('jdtls').start_or_attach(config)
-
