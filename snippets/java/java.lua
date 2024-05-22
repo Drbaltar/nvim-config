@@ -17,7 +17,7 @@ local test = s("test", fmt([[
 @Test
 void should{}() throws Exception {{
     {}
-}};
+}}
 ]], { i(1), i(0) })
 )
 
