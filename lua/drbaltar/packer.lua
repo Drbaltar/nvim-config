@@ -109,4 +109,5 @@ return require('packer').startup(function(use)
     use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }
     use 'tpope/vim-fugitive'
     use { 'kristijanhusak/vim-dadbod-ui', requires = { 'tpope/vim-dadbod', 'kristijanhusak/vim-dadbod-completion' } }
+    use 'vim-test/vim-test'
 end)
