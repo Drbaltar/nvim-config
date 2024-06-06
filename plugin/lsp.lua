@@ -38,6 +38,15 @@ cmp.setup({
     formatting = cmp_format,
 })
 
+vim.api.nvim_create_autocmd("FileType",
+    {
+        pattern = { "sql", "mysql", "plsql" },
+        callback = function()
+            require('cmp').setup.buffer({ sources = { { name = 'vim-dadbod-completion' } } })
+        end
+    })
+
+
 local function ts_on_attach()
     vim.keymap.set("n", "<leader>oi", function()
         vim.lsp.buf.execute_command({
