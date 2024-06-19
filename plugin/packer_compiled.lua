@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/k2186587/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/Users/k2186587/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/Users/k2186587/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/Users/k2186587/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/k2186587/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
+local package_path_str = "/Users/k2186587/.cache/nvim/packer_hererocks/2.1.1713773202/share/lua/5.1/?.lua;/Users/k2186587/.cache/nvim/packer_hererocks/2.1.1713773202/share/lua/5.1/?/init.lua;/Users/k2186587/.cache/nvim/packer_hererocks/2.1.1713773202/lib/luarocks/rocks-5.1/?.lua;/Users/k2186587/.cache/nvim/packer_hererocks/2.1.1713773202/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/k2186587/.cache/nvim/packer_hererocks/2.1.1713773202/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -74,11 +74,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["FixCursorHold.nvim"] = {
-    loaded = true,
-    path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
-    url = "https://github.com/antoinemadec/FixCursorHold.nvim"
-  },
   LuaSnip = {
     loaded = true,
     path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -138,27 +133,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/neogen",
     url = "https://github.com/danymat/neogen"
-  },
-  neotest = {
-    config = { "\27LJ\2\n%\0\1\3\0\3\0\0046\1\0\0009\1\1\0019\1\2\1D\1\1\0\vgetcwd\afn\bvimÉ\2\1\0\b\0\15\1\0316\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\r\0004\3\4\0006\4\0\0'\6\3\0B\4\2\0025\6\4\0005\a\5\0=\a\6\0063\a\a\0=\a\b\6B\4\2\2>\4\1\0036\4\0\0'\6\t\0B\4\2\0025\6\n\0B\4\2\2>\4\2\0036\4\0\0'\6\v\0B\4\2\0025\6\f\0B\4\2\0?\4\0\0=\3\14\2B\0\2\1K\0\1\0\radapters\1\0\0\1\0\1\18recursive_run\2\15neotest-go\1\0\1\19ignore_wrapper\1\17neotest-java\bcwd\0\benv\1\0\1\aCI\2\1\0\2\19jestConfigFile\26custom.jest.config.ts\16jestCommand\20bun run test --\17neotest-jest\nsetup\fneotest\frequire\a€€À™\4\0" },
-    loaded = true,
-    path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/neotest",
-    url = "https://github.com/nvim-neotest/neotest"
-  },
-  ["neotest-go"] = {
-    loaded = true,
-    path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/neotest-go",
-    url = "https://github.com/nvim-neotest/neotest-go"
-  },
-  ["neotest-java"] = {
-    loaded = true,
-    path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/neotest-java",
-    url = "https://github.com/rcasia/neotest-java"
-  },
-  ["neotest-jest"] = {
-    loaded = true,
-    path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/neotest-jest",
-    url = "https://github.com/nvim-neotest/neotest-jest"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -281,10 +255,30 @@ _G.packer_plugins = {
     path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/tsc.nvim",
     url = "https://github.com/dmmulroy/tsc.nvim"
   },
+  ["vim-dadbod"] = {
+    loaded = true,
+    path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/vim-dadbod",
+    url = "https://github.com/tpope/vim-dadbod"
+  },
+  ["vim-dadbod-completion"] = {
+    loaded = true,
+    path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/vim-dadbod-completion",
+    url = "https://github.com/kristijanhusak/vim-dadbod-completion"
+  },
+  ["vim-dadbod-ui"] = {
+    loaded = true,
+    path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
+    url = "https://github.com/kristijanhusak/vim-dadbod-ui"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-test"] = {
+    loaded = true,
+    path = "/Users/k2186587/.local/share/nvim/site/pack/packer/start/vim-test",
+    url = "https://github.com/vim-test/vim-test"
   }
 }
 
@@ -317,10 +311,6 @@ if not vim.g.packer_custom_loader_enabled then
   vim.g.packer_custom_loader_enabled = true
 end
 
--- Config for: neotest
-time([[Config for neotest]], true)
-try_loadstring("\27LJ\2\n%\0\1\3\0\3\0\0046\1\0\0009\1\1\0019\1\2\1D\1\1\0\vgetcwd\afn\bvimÉ\2\1\0\b\0\15\1\0316\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\r\0004\3\4\0006\4\0\0'\6\3\0B\4\2\0025\6\4\0005\a\5\0=\a\6\0063\a\a\0=\a\b\6B\4\2\2>\4\1\0036\4\0\0'\6\t\0B\4\2\0025\6\n\0B\4\2\2>\4\2\0036\4\0\0'\6\v\0B\4\2\0025\6\f\0B\4\2\0?\4\0\0=\3\14\2B\0\2\1K\0\1\0\radapters\1\0\0\1\0\1\18recursive_run\2\15neotest-go\1\0\1\19ignore_wrapper\1\17neotest-java\bcwd\0\benv\1\0\1\aCI\2\1\0\2\19jestConfigFile\26custom.jest.config.ts\16jestCommand\20bun run test --\17neotest-jest\nsetup\fneotest\frequire\a€€À™\4\0", "config", "neotest")
-time([[Config for neotest]], false)
 -- Config for: nvim-surround
 time([[Config for nvim-surround]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")

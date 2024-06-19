@@ -28,38 +28,6 @@ return require('packer').startup(function(use)
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'MunifTanjim/prettier.nvim'
     use "lukas-reineke/indent-blankline.nvim"
-    use({
-        "nvim-neotest/neotest",
-        requires = {
-            "nvim-lua/plenary.nvim",
-            "antoinemadec/FixCursorHold.nvim",
-            "nvim-treesitter/nvim-treesitter",
-            'nvim-neotest/neotest-jest',
-            "rcasia/neotest-java",
-            "nvim-neotest/neotest-go",
-            "nvim-neotest/nvim-nio",
-        },
-        config = function()
-            require('neotest').setup({
-                adapters = {
-                    require('neotest-jest')({
-                        jestCommand = "bun run test --",
-                        jestConfigFile = "custom.jest.config.ts",
-                        env = { CI = true },
-                        cwd = function(_)
-                            return vim.fn.getcwd()
-                        end,
-                    }),
-                    require("neotest-java")({
-                        ignore_wrapper = false,
-                    }),
-                    require("neotest-go")({
-                        recursive_run = true
-                    }),
-                }
-            })
-        end
-    })
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -105,7 +73,7 @@ return require('packer').startup(function(use)
     use 'rcarriga/nvim-notify'
     use { 'mfussenegger/nvim-jdtls', requires = { 'mfussenegger/nvim-dap' } }
     use 'folke/neodev.nvim'
-    use 'windwp/nvim-ts-autotag'
+    use { 'windwp/nvim-ts-autotag', requires = { "nvim-treesitter/nvim-treesitter" } }
     use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }
     use 'tpope/vim-fugitive'
     use { 'kristijanhusak/vim-dadbod-ui', requires = { 'tpope/vim-dadbod', 'kristijanhusak/vim-dadbod-completion' } }
