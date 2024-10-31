@@ -11,7 +11,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = { 'tsserver', 'jdtls', 'gopls', 'lua_ls' },
+    ensure_installed = { 'ts_ls', 'jdtls', 'gopls', 'lua_ls' },
     handlers = {
         lsp_zero.default_setup,
         ['jdtls'] = function()
@@ -58,7 +58,7 @@ end
 
 require("neodev").setup()
 
-require("lspconfig").tsserver.setup {
+require("lspconfig").ts_ls.setup {
     settings = {
         implicitProjectConfiguration = {
             checkJs = true
