@@ -11,7 +11,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = { 'ts_ls', 'jdtls', 'gopls', 'lua_ls' },
+    ensure_installed = { 'ts_ls', 'jdtls', 'gopls', 'lua_ls', 'omnisharp' },
     handlers = {
         lsp_zero.default_setup,
         ['jdtls'] = function()
@@ -79,6 +79,13 @@ require('lspconfig').lua_ls.setup({
         }
     }
 })
+
+-- require('nvim-autopairs.completion.cmp')
+
+-- cmp.event:on(
+--   'confirm_done',
+--   cmp_autopairs.on_confirm_done()
+-- )
 
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>[d', vim.diagnostic.goto_prev)

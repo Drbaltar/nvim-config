@@ -43,8 +43,8 @@ return require('packer').startup(function(use)
     use {
         "windwp/nvim-autopairs",
         event = "InsertEnter",
-        config = function()
-            require("nvim-autopairs").setup {}
+        config = function ()
+           require('nvim-autopairs').setup();
         end
     }
     use({
@@ -78,4 +78,5 @@ return require('packer').startup(function(use)
     use 'tpope/vim-fugitive'
     use { 'kristijanhusak/vim-dadbod-ui', requires = { 'tpope/vim-dadbod', 'kristijanhusak/vim-dadbod-completion' } }
     use 'vim-test/vim-test'
+    use 'hsanson/vim-android'
 end)
