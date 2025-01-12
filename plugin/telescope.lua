@@ -1,4 +1,3 @@
-require('telescope').load_extension('luasnip')
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = "[S]earch [F]iles in Telescope" })
@@ -12,3 +11,15 @@ vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = "[S]earch [D]iag
 vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = "[S]earch [B]uffers in Telescope" })
 vim.keymap.set('n', '<leader>sn', ':Telescope luasnip<CR>', { desc = "[S]earch S[n]ippets in Telescope" })
 vim.keymap.set('n', '<leader>sk', ':Telescope keymaps<CR>', { desc = "[S]earch [K]eymaps in Telescope" })
+
+require('telescope').setup({
+    extensions = {
+        ["ui-select"] = {
+            require("telescope.themes").get_dropdown {
+            }
+        }
+    }
+})
+
+require('telescope').load_extension('luasnip')
+require("telescope").load_extension("ui-select")
