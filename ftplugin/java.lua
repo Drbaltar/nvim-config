@@ -1,3 +1,7 @@
+vim.opt_local.tabstop = 4
+vim.opt_local.softtabstop = 4
+vim.opt_local.shiftwidth = 4
+
 local jdtls = require('jdtls')
 local jdtlsTests = require('jdtls.tests')
 
@@ -21,9 +25,13 @@ local bundles = {
 vim.list_extend(bundles,
     vim.split(vim.fn.glob("~/.local/share/nvim/mason/packages/java-test/extension/server/*.jar", 1), "\n"))
 
+local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':t')
+local workspace_dir = '~/.config/jdtls/' .. project_name
+
 local config = {
     cmd = {
         vim.fn.expand("~/.local/share/nvim/mason/bin/jdtls"),
+        -- '-data', workspace_dir,
         "--jvm-arg=" .. string.format("-javaagent:%s", vim.fn.expand "$MASON/share/jdtls/lombok.jar")
     },
     root_dir = vim.fs.dirname(vim.fs.find({ 'gradlew', '.git', 'mvnw' }, { upward = true })[1]),
